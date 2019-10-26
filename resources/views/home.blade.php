@@ -22,7 +22,7 @@
           <div class="panel-heading">
                  <h5><center>DB Connection: SQL.Azurestack.com</center></h5>
           
-          <form action="{{ url('/create') }}" method="GET">
+           <form action="{{ url('/create') }}" method="GET">
           <button type="submit" class="btn btn-outline-secondary btn-pill" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Check Compliance!</center></font></b></button>
         </form>
                     <form action="{{ url('/') }}" method="GET">
@@ -34,33 +34,3 @@
           </div>
           </div>
    
-
-        <div class="panel-body">
-
-          <div class="table-responsive">
-            <table class="table table-striped task-table">
-              <thead>
-                <th>In Compliance</th>
-                <th>Picture Identifier</th>
-                <th>Text</th>
-                <th>Description</th>
-                <th>Timestamp</th>
-                <th>Link</th>
-                <th>Location</th>
-              </thead>
-                <tbody>
-                  @foreach ($report as $rep)
-                <tr>
-                  <td class="table-text"><div>{{$rep->inCompliance}}</div></td>
-                  <td class="table-text"><div>{{$rep->identifier}}</div></td>
-                  <td class="table-text"><div>{{$rep->text}}</div></td>
-                  <td class="table-text"><div>{{$rep->description}}</div></td>
-                  <td class="table-text"><div>{{$rep->timestamp}}</div></td>
-                  <td class="table-text"><div>{{$rep->link}}</div></td>
-                  <td class="table-text"><div>{{$rep->location}}</div></td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-          </div>
-        </div>
