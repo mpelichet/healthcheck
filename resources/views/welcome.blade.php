@@ -47,17 +47,38 @@
                 <th>Timestamp</th>
                 <th>Link</th>
                 <th>Location</th>
+                <th> Pic </th>
               </thead>
                 <tbody>
                   @foreach ($report as $rep)
                 <tr>
-                  <td class="table-text"><div>{{$rep->inCompliance}}</div></td>
+                  
+
+                    @if ($rep->inCompliance == "Yes")
+                    <td class="table-text" bgcolor="#2b942d"><center><div style="font-size:x-large"><i class="fa fa-check"></i></div></center></td>
+                    @else
+                    <td class="table-text" bgcolor= "#e63900"><center><div style="font-size:x-large"><i class="fa fa-remove"></i></div></center></td>
+                    @endif
                   <td class="table-text"><div>{{$rep->identifier}}</div></td>
                   <td class="table-text"><div>{{$rep->text}}</div></td>
                   <td class="table-text"><div>{{$rep->description}}</div></td>
                   <td class="table-text"><div>{{$rep->timestamp}}</div></td>
                   <td class="table-text"><div>{{$rep->link}}</div></td>
                   <td class="table-text"><div>{{$rep->location}}</div></td>
+                  
+                  <td class="table-text"><div>
+                  <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal-<?php echo $rep->id;?>"><i class="fa fa-camera"></i></button>
+                  </td>
+                  
+                  <div id="myModal-<?php echo $rep->id;?>" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-body">
+                         <button type="button" class="close" class="close" id="btnWidgetClose" style="font-size:30px;opacity:0.5;"></button>
+                        <img class="img-responsive" style="max-width: 100%;" src="{{$rep->link}}"/> 
+                        </div>
                 </tr>
                 @endforeach
               </tbody>
