@@ -23,14 +23,15 @@
                  <h5><center>DB Connection: SQL.Azurestack.com</center></h5>
           
           <form action="{{ url('/create') }}" method="GET">
-          <button type="submit" class="btn btn-outline-secondary btn-pill" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Check Compliance!</center></font></b></button>
+          <button type="submit" class="btn btn-outline-secondary btn-pill pull-left" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Check Compliance!</center></font></b></button>
         </form>
                     <form action="{{ url('/') }}" method="GET">
-                    <button type="submit" class="btn btn-outline-secondary btn-pill" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Clear </center></font></b></button>
+                    <button type="submit" class="btn btn-outline-secondary btn-pill pull-right" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Clear </center></font></b></button>
                   </form>
+
+          <br></br>
           <div class="blog section section-invert py-6">
           <br>
-
           </div>
           </div>
    
