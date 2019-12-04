@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::post('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@view');
+Route::get('/create', 'WelcomeController@viewData');
+
