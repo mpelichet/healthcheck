@@ -24,8 +24,10 @@ public function view()
   public function viewData()
   {
 
-    $report = DB::table('table1')
-    		->get();
+    //$report = DB::table('table1')
+    //		->get();
+    $query = "SELECT * FROM healthdata.dbo.aggregated_data WHERE display = 1 ORDER BY disp_order DESC";
+    $report = DB::select(DB::raw($query));
 
     return view('welcome', compact('report'));
   }
