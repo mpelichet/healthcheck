@@ -15,11 +15,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'default' => env('DB_CONNECTION', 'sqlsrv'),
-=======
-    'default' => env('DB_CONNECTION', 'mysql'),
->>>>>>> 6d00c4b04dfccd275aeef07f76a338d526f366d4
 
     /*
     |--------------------------------------------------------------------------
