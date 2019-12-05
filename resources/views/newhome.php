@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <link rel="stylesheet" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Ffont-awesome%2F4.7.0%2Fcss%2Ffont-awesome.min.css&amp;data=02%7C01%7CGarvita.Rai%40microsoft.com%7C3bef1a73b4594b61e1af08d7788ad09d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637110409908428679&amp;sdata=4cvvYgpjtv%2B2feI1SkOJfAfcXHQcf2fxCk2QAaOIHQY%3D&amp;reserved=0">
 <meta name="viewport" content="width=device-width, initial-scale=1"> <style>
 
@@ -45,7 +44,7 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001029;">
   <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://image45.blob.core.windows.net/ignite/Internet-of-Things_The-Digital-Future-of-Value-based-Care.png" width=150 height=100 class="mr-2" href="{{ url('/') }}"></a>
             <h3 class="section-title text-center m-7">
-              <b><font color = "white">Welcome to HealthCheck Compliance</font></b>
+              <b><font color = "white"> Welcome to HealthCheck Compliance</font></b>
           </h3>
           </nav>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,11 +88,10 @@
           <button type="submit" class="btn btn-outline-secondary btn-pill pull-left" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Check Compliance</center></font></b></button>
         </form>
                     <form action="{{ url('/') }}" method="GET">
-                    <button type="submit" class="btn btn-outline-secondary btn-pill pull-right" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Clear</center></font></b></button>
+                    <button type="submit" class="btn btn-outline-secondary btn-pill pull-right" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Clear </center></font></b></button>
                   </form>
           <div class="blog section section-invert py-6">
           <br>
 
           </div>
           </div>
-
