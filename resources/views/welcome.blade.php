@@ -6,7 +6,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <link rel="stylesheet" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Ffont-awesome%2F4.7.0%2Fcss%2Ffont-awesome.min.css&amp;data=02%7C01%7CGarvita.Rai%40microsoft.com%7C3bef1a73b4594b61e1af08d7788ad09d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637110409908428679&amp;sdata=4cvvYgpjtv%2B2feI1SkOJfAfcXHQcf2fxCk2QAaOIHQY%3D&amp;reserved=0">
 <meta name="viewport" content="width=device-width, initial-scale=1"> <style>
 
