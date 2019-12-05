@@ -1,0 +1,98 @@
+<title>HealthCheck Compliance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+@extends('layouts.app')
+
+@section('content')
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001029;">
+  <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://image45.blob.core.windows.net/ignite/Internet-of-Things_The-Digital-Future-of-Value-based-Care.png" width=150 height=100 class="mr-2" href="{{ url('/') }}"></a>
+            <h3 class="section-title text-center m-7">
+              <b><font color = "white">Contoso Health Compliance</font></b>
+          </h3>
+          </nav>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d3d3d3;">
+<a href="#" class="w3-bar-item w3-button">Home</a>
+  <!-- <a href="#portfolio" class="w3-bar-item w3-button">Azure Stack Portal</a> -->
+    <!-- <a href="#contact" class="w3-bar-item w3-button">Database Setup</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+
+<meta name= "viewport" content= "width=device-width, initial-scale=1">
+<div class="container" overflow="auto">
+  <div class="col">
+  <div class="form-group">
+</div>
+
+          <div class="panel panel-default">
+          <div class="panel-heading">
+                        <h4><center><b>Welcome Natalia!</b></center></h4>
+                           <h5><center>Your connection to contosohealthdb is <span style="color: #32cd32">live!</span></center></h5>
+                           <h5><center>Aggregating data from 3 Azure Stack Edges.</center></h5>
+
+          <form action="{{ url('/create') }}" method="GET">
+          <button type="submit" class="btn btn-outline-secondary btn-pill pull-left" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Check Compliance</center></font></b></button>
+        </form>
+                    <form action="{{ url('/') }}" method="GET">
+                    <button type="submit" class="btn btn-outline-secondary btn-pill pull-right" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Clear </center></font></b></button>
+                  </form>
+
+          <br></br>
+          <div class="blog section section-invert py-6">
+          <br>
+          </div>
+          </div>
+
+
+        <div class="panel-body">
+
+          <div class="table-responsive">
+            <table class="table table-striped task-table">
+              <thead>
+                <th>In Compliance</th>
+                <th>Picture Identifier</th>
+                <th>Location</th>
+                <th>Keywords</th>
+                <th>Timestamp</th>
+                <th>Filename</th>
+                <th> Pic </th>
+              </thead>
+                <tbody>
+                  @foreach ($report as $rep)
+                <tr>
+
+
+                    @if ($rep->compliant == 1)
+                    <td class="table-text" bgcolor="#2b942d"><center><div style="font-size:x-large"><i class="fa fa-check"></i></div></center></td>
+                    @else
+                    <td class="table-text" bgcolor= "#e63900"><center><div style="font-size:x-large"><i class="fa fa-remove"></i></div></center></td>
+                    @endif
+                  <td class="table-text"><div>{{$rep->guid}}</div></td>
+                  <td class="table-text"><div>{{$rep->location}}</div></td>
+                  <td class="table-text"><div>{{$rep->keywords}}</div></td>
+                  <td class="table-text"><div>{{$rep->timestamp}}</div></td>
+                  <td class="table-text"><div>{{$rep->filename}}</div></td>
+
+                  <td class="table-text"><div>
+                  <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal-<?php echo $rep->guid;?>"><i class="fa fa-camera"></i></button>
+                  </td>
+
+                  <div id="myModal-<?php echo $rep->guid;?>" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-body">
+                         <button type="button" class="close" class="close" id="btnWidgetClose" style="font-size:30px;opacity:0.5;"></button>
+                        <img class="img-responsive" style="max-width: 100%;" src="{{$rep->url}}"/>
+                        </div>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+        </div>
