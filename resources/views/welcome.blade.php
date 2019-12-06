@@ -44,70 +44,93 @@
 #myDiv {
   display: none;
 }
+
+navbar navbar-expand-lg-navbar-child"{
+  background-color: #f5f5f5;
+}
+
+.form-button-container{
+  text-align:center;
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+}
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001029;">
-  <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://image45.blob.core.windows.net/ignite/Internet-of-Things_The-Digital-Future-of-Value-based-Care.png" width=150 height=100 class="mr-2" href="{{ url('/') }}"></a>
-            <h3 class="section-title text-center m-7">
-              <b><font color = "white">Contoso Health Compliance</font></b>
-          </h3>
-          </nav>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d3d3d3;">
-<a href="#" class="w3-bar-item w3-button">Home</a>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div style="display:inline;padding: 16px;">
+  <a class="navbar-brand" href="{{ url('/') }}"><img src="https://i.ibb.co/7XMQcwd/Vector.png" class="mr-2" href="{{ url('/') }}"></a>
+            <h3 style="">Contoso Health Compliance</h3>
+          <a href="#" class="welcome-button">Home</a>
+</div>
+</nav>
+  <!-- <nav class="navbar navbar-expand-lg-navbar-child" style="background-color: #d3d3d3;"> -->
+<!-- <a href="#" class="w3-bar-item w3-button">Home</a> -->
   <!-- <a href="#portfolio" class="w3-bar-item w3-button">Azure Stack Portal</a> -->
     <!-- <a href="#contact" class="w3-bar-item w3-button">Database Setup</a> -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-</nav>
+</nav> -->
 
+<div class="form-group">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <br/>
+                              <h4><center><b>Welcome Natalia!</b></center></h4>
+                                <h5><center>Your connection to contosohealthdb is live!</span>
+                                <h5><center>Aggregating data from 3 Azure Stack Edges.</center></h5>
+
+                  <div class="form-button-container" style="text-align:center">
+
+                    <form action="{{ url('/create') }}" method="GET" style="display:inline-block;padding: 5px;">
+                    <button class="action-button" type="submit"><font color = "white"><center>Check Compliance</center></font></b></button>
+                    </form>
+
+                    <form action="{{ url('/') }}" method="GET" style="display:inline-block;padding: 5px">
+                      <button class="action-button-2" type="submit" ><center>Clear </center></b></button>
+                    </form>
+
+                  </div>
+            
+            </div>
+        
+    </div>
 
 <meta name= "viewport" content= "width=device-width, initial-scale=1">
 <div class="container" overflow="auto">
   <div class="col">
-  <div class="form-group">
-</div>
+    <br/>
+    <br/>
+        <div class="blog section section-invert py-6">
+                    <body onload="myFunction()" style="margin:0;">
+                      <div id="x">
+                        <center><button class="buttonload">
+                          <i class="fa fa-spinner fa-spin"></i>Processing data from Azure Stack Edge 1 … </button></center> 
+                        <center><button class="buttonload">  
+                          <i class="fa fa-spinner fa-spin"></i>Processing data from Azure Stack Edge 2 … </button></center> 
+                        <center><button class="buttonload">  
+                          <i class="fa fa-spinner fa-spin"></i>Processing data from Azure Stack Edge 3 … </button></center>
+                      </div>
+                  </div>
+        </div>
+    
 
-          <div class="panel panel-default">
-          <div class="panel-heading">
-                        <h4><center><b>Welcome Natalia!</b></center></h4>
-                           <h5><center>Your connection to contosohealthdb is <span style="color: #32cd32">live!</span></center></h5>
-                           <h5><center>Aggregating data from 3 Azure Stack Edges.</center></h5>
-
-          <form action="{{ url('/create') }}" method="GET">
-          <button type="submit" class="btn btn-outline-secondary btn-pill pull-left" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Check Compliance</center></font></b></button>
-        </form>
-                    <form action="{{ url('/') }}" method="GET">
-                    <button type="submit" class="btn btn-outline-secondary btn-pill pull-right" style="background-color: #0078d4;" font color="red;"><font color = "white"><center>Clear </center></font></b></button>
-                  </form>
-
-          <br></br>
-          <div class="blog section section-invert py-6">
-          <br>
-          <body onload="myFunction()" style="margin:0;">
-          <div id="x">
-            <center><button class="buttonload">
-              <i class="fa fa-spinner fa-spin"></i>Processing data from Azure Stack Edge 1 … </button></center> 
-            <center><button class="buttonload">  
-              <i class="fa fa-spinner fa-spin"></i>Processing data from Azure Stack Edge 2 … </button></center> 
-            <center><button class="buttonload">  
-              <i class="fa fa-spinner fa-spin"></i>Processing data from Azure Stack Edge 3 … </button></center> 
-          </div>
-          </div>
-          </div>
 
         <div style="display:none;" id="myDiv" class="animate-bottom">
-          <h5><center><span style="color: #32cd32">Azure Stack Edge 1 - Synced</span></center></h5>
-          <h5><center><span style="color: #32cd32">Azure Stack Edge 2 - Synced</span></center></h5>
-          <h5><center><span style="color: #32cd32">Azure Stack Edge 3 - Synced</span></center></h5>
+          <h5 class="synced-text"><center>Azure Stack Edge 1 - Synced</center></h5>
+          <h5 class="synced-text"><center>Azure Stack Edge 2 - Synced</center></h5>
+          <h5 class="synced-text"><center>Azure Stack Edge 3 - Synced</center></h5>
+        <br/>
 
         <div class="panel-body">
 
           <div class="table-responsive">
             <table class="table table-striped task-table">
               <thead>
-                <th>In Compliance</th>
-                <th>Picture Identifier</th>
+                <th>Compliance</th>
+                <th>Identifier</th>
                 <th>Location</th>
                 <th>Keywords</th>
                 <th>Timestamp</th>

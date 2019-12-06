@@ -46,7 +46,7 @@
 }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001029;">
-  <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://image45.blob.core.windows.net/ignite/Internet-of-Things_The-Digital-Future-of-Value-based-Care.png" width=150 height=100 class="mr-2" href="{{ url('/') }}"></a>
+  <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://smallimg.pngkey.com/png/small/235-2350323_white-icon-office-365-png-white-icon-azure.png" width=150 height=100 class="mr-2" href="{{ url('/') }}"></a>
             <h3 class="section-title text-center m-7">
               <b><font color = "white">Welcome to HealthCheck Compliance</font></b>
           </h3>

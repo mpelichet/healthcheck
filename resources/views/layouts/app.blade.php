@@ -13,24 +13,27 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/tjxcanada/public/shards.min.css">
-    <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/tjxcanada/public/shards-extras.min.css">
-    <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/tjxcanada/public/shards.css">
+    <!-- <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/tjxcanada/public/shards.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/tjxcanada/public/shards-extras.min.css">
+    <link rel="stylesheet" href="https://s3.ca-central-1.amazonaws.com/tjxcanada/public/shards.css"> -->
 
     <style>
+
     footer {
       bottom:0px;
       position:fixed;
       width:100%;
+      font-family:  'Lato', sans-serif;
     }
 html, body {
-                background-color: #fff;
-                color: #000;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 100;
+                background-color: #222;
+
+                color: white;
+                font-family:  'Lato', sans-serif;
+                /* font-weight: 100; */
                 height: 100vh;
                 margin: 0;
-                display: none;
+                
             }
 
             .full-height {
@@ -41,6 +44,10 @@ html, body {
                 align-items: center;
                 display: flex;
                 justify-content: center;
+            }
+            
+            .container{
+              max-width: 1280px;
             }
 
             .position-ref {
@@ -94,11 +101,152 @@ html, body {
             }
             .navbar{
               padding: 0.0rem 1.5rem;
+              background-color: #375a7f !important;  
+            }
+            .navbar-navbar-expand-lg-navbar-light{
+              background-color: #f5f5f5 !important; 
             }
 
         .fa-btn {
             margin-right: 6px;
         }
+
+        h3{ 
+          font-size: 18.73px;
+          margin-top: 15px !important;
+          display: inline-block;
+          padding-left: 50px;
+        }
+
+        h4 { 
+          font-size: 2rem;
+          line-height: 5rem;
+        }
+
+        h5{
+          font-size: 1.1rem;
+          font-weight: 100;
+        }
+
+        .navbar-brand{
+          display:inline-block;
+          margin: 0px; 
+          position: absolute; 
+          padding-top: 10px;
+        }
+
+        .navbar-brand img{
+          display:inline-block;
+          margin: 0px; 
+          width: 32px; 
+          height: 27px;
+        }
+        .welcome-button{
+          padding-left: 15px;
+          color: rgba(255,255,255,.6); 
+        }
+
+        .welcome-button:hover{
+          color: white;
+        }
+
+        .action-button{
+          background-color: #375a7f;
+          padding: 5px 12px;
+          border: none;
+          margin-top: 20px;
+          border-radius: 2px;
+        }
+
+        .action-button-2{
+          background-color: white;
+          color: #375a7f;
+          padding: 5px 15px;
+          border: none;
+          margin-top: 20px;
+          border-radius: 2px;
+        }
+
+        .panel-heading{
+          background-color: #303030;
+          padding-bottom: 20px;
+        }
+
+        blog section section-invert py-6{
+          background: none; 
+          color: white; 
+        }
+
+        .buttonload {
+          background-color: #222222;
+          border: none;
+          color: #00bc8c;
+          padding: 12px 24px;
+          font-size: 1.1rem;
+          font-weight: 100;
+        }
+
+        .synced-text{
+          color: #00bc8c;
+        }
+
+
+        .table thead th{
+          background-color: #444444;
+          padding: 25px;
+          border: none !important; 
+          border-bottom: none !important;
+        }
+
+        .table td{
+          padding: 1.5rem;
+        }
+
+      
+        .table-striped tbody tr:hover{
+          background-color: #444444 !important;
+          z-index: 1000;
+        }
+
+        td{
+          background-color:#303030;
+          border-top: none !important;
+          border-bottom: 2px solid #444444;
+          padding:20px;
+        } 
+
+        td:hover{
+          z-index: -1000;
+        } 
+
+        .fa-check:before {
+          color: #4bce4b;
+        }
+
+        .fa-remove:before {
+          color: #c64545;
+        }
+
+        .modal-body{
+          background-color: #303030;
+        }
+
+        .btn-outline-info{
+          border: none; 
+          color: white;
+        }
+
+        .btn-outline-info.focus, .btn-outline-info:focus{
+          box-shadow: none;
+        }
+
+        .btn-outline-info:hover{
+          border: none; 
+          background: none !important;
+          color: rgba(255,255,255, 0.8);
+        }
+
+
 
     </style>
 
@@ -108,7 +256,7 @@ html, body {
         @guest
 
         @else
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff8b32;">
+  <nav class="navbar-navbar-expand-lg-navbar-light">
   <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://cdn.sanity.io/images/q769kjeh/production/77d980151e5c71a825a562e515572962e29a7ff6-2660x440.png?w=1600&h=265&fit=crop" class="mr-2" href="{{ url('/') }}"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
