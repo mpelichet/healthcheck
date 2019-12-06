@@ -30,6 +30,7 @@ html, body {
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                display: none;
             }
 
             .full-height {
