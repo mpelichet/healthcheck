@@ -152,24 +152,33 @@ html, body {
 
         .action-button{
           background-color: #375a7f;
-          padding: 5px 12px;
+          padding: 8px 15px;
           border: none;
           margin-top: 20px;
           border-radius: 2px;
+          font-weight: 500;
         }
 
         .action-button-2{
           background-color: white;
           color: #375a7f;
-          padding: 5px 15px;
+          padding: 8px 20px;
           border: none;
           margin-top: 20px;
           border-radius: 2px;
+          font-weight: 500;
+
         }
 
         .panel-heading{
           background-color: #303030;
           padding-bottom: 20px;
+        }
+
+        .panel-heading-2{
+          background-color: #303030;
+          padding-bottom: 20px;
+          height: 100%; 
         }
 
         blog section section-invert py-6{
@@ -178,7 +187,7 @@ html, body {
         }
 
         .buttonload {
-          background-color: #222222;
+          background-color: transparent;
           border: none;
           color: #00bc8c;
           padding: 12px 24px;
@@ -246,6 +255,13 @@ html, body {
           color: rgba(255,255,255, 0.8);
         }
 
+        .table-text{
+          font-size: 14;
+          font-weight: 400;
+        }
+
+        
+
 
 
     </style>
@@ -256,11 +272,16 @@ html, body {
         @guest
 
         @else
-  <nav class="navbar-navbar-expand-lg-navbar-light">
-  <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://cdn.sanity.io/images/q769kjeh/production/77d980151e5c71a825a562e515572962e29a7ff6-2660x440.png?w=1600&h=265&fit=crop" class="mr-2" href="{{ url('/') }}"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #001029;">
+          <a class="navbar-brand" href="{{ url('/') }}"> <img src="https://smallimg.pngkey.com/png/small/235-2350323_white-icon-office-365-png-white-icon-azure.png" width=150 height=100 class="mr-2" href="{{ url('/') }}"></a>
+                    <h3 class="section-title text-center m-7">
+                      <b><font color = "white">Fabrikam Health Compliance</font></b>
+                  </h3>
+                  </nav>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -353,6 +374,8 @@ html, body {
         </div>
   </div>
 </nav>
+
+
 @endif
 @yield('content')
 

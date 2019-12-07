@@ -60,8 +60,8 @@ navbar navbar-expand-lg-navbar-child"{
 <nav class="navbar navbar-expand-lg navbar-light">
   <div style="display:inline;padding: 16px;">
   <a class="navbar-brand" href="{{ url('/') }}"><img src="https://i.ibb.co/7XMQcwd/Vector.png" class="mr-2" href="{{ url('/') }}"></a>
-            <h3 style="">Contoso Health Compliance</h3>
-          <a href="#" class="welcome-button">Home</a>
+            <h3 style="">Fabrikam Health Compliance</h3>
+          <a href="{{ url('/') }}" class="welcome-button">Home</a>
 </div>
 </nav>
   <!-- <nav class="navbar navbar-expand-lg-navbar-child" style="background-color: #d3d3d3;"> -->
@@ -73,14 +73,12 @@ navbar navbar-expand-lg-navbar-child"{
   </button>
 </nav> -->
 
-<div class="form-group">
-
             <div class="panel panel-default">
               <div class="panel-heading">
                 <br/>
-                              <h4><center><b>Welcome Natalia!</b></center></h4>
-                                <h5><center>Your connection to contosohealthdb is live!</span>
-                                <h5><center>Aggregating data from 3 Azure Stack Edges.</center></h5>
+              <h4><center><b>Welcome Natalia!</b></center></h4>
+                <h5><center>Your connection to contosohealthdb is live!</center></h5>
+                <h5><center>Aggregating data from 3 Azure Stack Edges.</center></h5>
 
                   <div class="form-button-container" style="text-align:center">
 
@@ -96,7 +94,7 @@ navbar navbar-expand-lg-navbar-child"{
             
             </div>
         
-    </div>
+             </div>
 
 <meta name= "viewport" content= "width=device-width, initial-scale=1">
 <div class="container" overflow="auto">
